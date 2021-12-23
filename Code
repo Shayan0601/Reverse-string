@@ -14,7 +14,7 @@ n = 2
 temp = 0 
 chars = int(length/n)
 
-equalStr = [];
+equalStr = []
 
 #Diving the string into two equal parts
 if x==1:
