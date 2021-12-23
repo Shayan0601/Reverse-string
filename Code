@@ -18,8 +18,7 @@ equalStr = [];
 
 #Diving the string into two equal parts
 if x==1:
-    for i in range(0, length, chars):  
-      
+    for i in range(0, length, chars):
         part = str[ i : i+chars];  
         equalStr.append(part);  
         
