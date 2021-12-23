@@ -1,6 +1,6 @@
 str=str(input("Enter a string of even lenght: ")) 
 x=1
-length = len(str);
+length = len(str)
 
 #Checking the length of the string
 for i in range(length):
@@ -10,17 +10,17 @@ for i in range(length):
         print("Enter an even length of string")
         x=0
         break
-n = 2;  
-temp = 0;  
-chars = int(length/n);  
+n = 2  
+temp = 0 
+chars = int(length/n)
 
 equalStr = [];
 
 #Diving the string into two equal parts
 if x==1:
     for i in range(0, length, chars):
-        part = str[ i : i+chars];  
-        equalStr.append(part);  
+        part = str[ i : i+chars]  
+        equalStr.append(part)  
         
     #Storing the divided strings into two defined strings
     str1=equalStr[0]
