@@ -10,14 +10,14 @@ for i in range(length):
         print("Enter an even length of string")
         x=0
         break
+        
 n = 2  
-temp = 0 
 chars = int(length/n)
 
 equalStr = []
 
-#Diving the string into two equal parts
 if x==1:
+    #Diving the string into two equal parts
     for i in range(0, length, chars):
         part = str[ i : i+chars]  
         equalStr.append(part)  
