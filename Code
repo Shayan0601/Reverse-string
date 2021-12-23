@@ -1,0 +1,63 @@
+str=str(input("Enter a string of even lenght: ")) 
+x=1
+length = len(str);
+
+#Checking the length of the string
+for i in range(length):
+    if length%2==0:
+        pass
+    else:
+        print("Enter an even length of string")
+        x=0
+        break
+n = 2;  
+temp = 0;  
+chars = int(length/n);  
+
+equalStr = [];
+
+#Diving the string into two equal parts
+if x==1:
+    for i in range(0, length, chars):  
+      
+        part = str[ i : i+chars];  
+        equalStr.append(part);  
+        
+    #Storing the divided strings into two defined strings
+    str1=equalStr[0]
+    str2=equalStr[1]
+    
+    #Getting alternate letters from each strings and storing into list
+    def solve(str1, str2):
+        m = n = 0
+        result = ""
+        while m < len(str1) and n < len(str2):
+            result += str1[m] + str2[n]
+            m+=1
+            n+=1
+        while m < len(str1):
+            result += str1[m]
+            m += 1
+        while n < len(str2):
+            result += str2[n]
+            n += 1
+        list1=list(result)
+        return list1
+    
+    list1=solve(str1, str2)
+    
+    #Joining the consecutive letters of the list
+    res = [k + l for k, l in zip(list1, list1[1:])]
+    d=res[::2]
+    
+    #Reversing the list
+    def Reverse(d):
+        return [ele for ele in reversed(d)]
+    
+    #Converting the list into string
+    listToStr = ' '.join(Reverse(d))
+    
+    #Removing the spaces between the string
+    def remove(listToStr):
+        return listToStr.replace(" ", "")
+    print(remove(listToStr))
